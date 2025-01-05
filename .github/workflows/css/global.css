@@ -1,0 +1,136 @@
+/* =======================
+      Colors
+==========================*/
+
+:root {
+  --bodyBG: #f6f6f6;
+  --bodyFont: #2b3445;
+  --blue: #9fc5ef;
+  --blue-button: #1976d2;
+  --red-button: #e41d43;
+
+  --icons: #40464d;
+
+  --footer-bg: #212529;
+
+  --white: #fff;
+}
+
+body {
+  background-color: var(--bodyBG);
+  color: var(--bodyFont);
+}
+
+/* =======================
+       My classes
+==========================*/
+
+.border {
+  border: 4px solid red;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+}
+
+/* =================
+    General Style
+====================*/
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap");
+
+html {
+  font-family: system-ui, -apple-system, "Roboto", sans-serif;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+
+body {
+  --sb-track-color: #232E33;
+  --sb-thumb-color: #6b70af;
+  --sb-size: 8px;
+}
+
+body::-webkit-scrollbar {
+  width: var(--sb-size)
+}
+
+body::-webkit-scrollbar-track {
+  background: var(--sb-track-color);
+  border-radius: 3px;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: var(--sb-thumb-color);
+  border-radius: 3px;
+  
+}
+
+@supports not selector(::-webkit-scrollbar) {
+  body {
+    scrollbar-color: var(--sb-thumb-color)
+                     var(--sb-track-color);
+  }
+}
+
+
+main {
+  width: 80%;
+  margin-inline: auto;
+}
+
+@media (width < 600px) {
+  main {
+    width: 100%;
+  }
+}
+
+/* =======================
+       HTML elements
+==========================*/
+a,
+button {
+  all: unset;
+  display: inline-block;
+  transition: 0.2s;
+}
+
+button:active,
+a:active {
+  scale: 0.9;
+}
+
+button:hover,
+a:hover {
+  cursor: pointer;
+}
+
+button:disabled{
+  opacity: 0.7;
+  cursor: not-allowed;
+  scale: 1;
+}
+
+li {
+  list-style: none;
+}
+
+/* =======================================
+    General Style for this project
+==========================================*/
+.fa-solid {
+  color: var(--icons);
+}
